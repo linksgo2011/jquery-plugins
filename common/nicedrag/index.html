@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>模拟拖拽插件</title>
+        <link rel="stylesheet" href="../pure-min.css">
+        <link rel="stylesheet" href="../demo.css">
+        <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+        <!-- 插件文件 -->
+        <link rel="stylesheet" href="jquery.nicedrag.css">
+        <script type="text/javascript" src="jquery.nicedrag.js"></script>
+        <style type="text/css">
+            .clearfix {
+              *zoom: 1;
+            }
+            .clearfix:before,
+            .clearfix:after {
+              display: table;
+              line-height: 0;
+              content: "";
+            }
+
+            .clearfix:after {
+              clear: both;
+            }
+            
+            .nicedrag{
+                width: 400px;
+            }
+            .nicedrag .demo_list{
+                list-style: none;
+                margin:0px;
+                padding: 0px;
+                clear:both;
+            }
+            .nicedrag .demo_list li{
+                display: block;
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>效果预览</h2>
+
+        <div class="nicedrag">
+            <div class="wrap">
+                <ul class="demo_list clearfix">
+                    <li data-id="1">水果</li>
+                    <li data-id="2">桃子</li>
+                    <li data-id="3">苹果</li>
+                    <li data-id="3">苹果</li>
+                    <li data-id="3">苹果</li>
+                    <li data-id="3">苹果</li>
+                    <li data-id="3">苹果</li>
+                    <li data-id="3">苹果</li>
+                    <li data-id="3">苹果</li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(".nicedrag").nicedrag();
+        </script>
+        <h2>文件打包下载</h2>
+        <a href="/publish/zip.php?dir=product/jq-plugins/common/nicedrag" class="button-secondary pure-button">进入下载</a>
+    </body>
+</html>

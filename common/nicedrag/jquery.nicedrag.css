@@ -1,0 +1,17 @@
+.nicedrag{
+    width: 100%;    
+    position: relative;
+    border: 1px solid #ededed;
+    overflow: hidden;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.nicedrag .wrap{
+    width: 900px;
+    cursor:pointer;
+}

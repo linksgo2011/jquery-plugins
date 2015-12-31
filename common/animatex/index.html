@@ -1,0 +1,138 @@
+<!doctype html>
+<html> 
+<head>
+    <meta charset="utf-8">
+    <title>动画</title>
+    <meta name="fragment" content="!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="http://sandbox.runjs.cn/js/sandbox/bootstrap-2.2.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <div class="content">
+        <h1>动画助手 animateX 插件演示</h1>
+        <div class="state1">
+            <h4>css3和jquery 动画比较</h4>
+            <div class="row-fluid clearfix">
+                <div class="span6 cube-box">
+                    <div id="state1a" class="cube green" style=""></div>
+                </div>
+                <div class="span6 cube-box">
+                    <div id="state1b" class="cube green" style=""></div>
+                </div>
+            </div>
+            <div class="row-fluid clearfix">
+                <div class="span6 ">
+<pre>
+    $("#state1a").animate({left:150,top:150,opacity:0},1000,function(){
+        $(this).css({left:0,top:0,opacity:1});
+    });
+</pre>
+                </div>
+                <div class="span6 ">
+<pre>
+    // class state1b 需要先定义
+    ("#state1b").css3("state1b");
+</pre>
+                </div>
+            </div>
+            <div>
+                <button id="state1_btn">开始</button>
+            </div>
+        </div>
+
+        <div class="state2">
+            <h4>css3 animate动画和css3 transform动画，以及jquery动画混用</h4>
+            <div class="row-fluid clearfix">
+                <div class="span12 cube-box">
+                    <div id="state2a" class="cube green" style=""></div>
+                </div>
+            </div>
+            <div class="row-fluid clearfix">
+                <div class="span12 ">
+<pre>
+    // 前面的animate 是jquery动画，bounce 是css3 animate动画，moving 是css3 transform动画
+    $("#state2a").animate({left:150,top:150},1000).css3("bounce").css3("moving");
+</pre>
+                </div>
+            </div>
+            <div>
+                <button id="state2_btn">开始</button>
+            </div>
+        </div>
+
+        <div class="state3">
+            <h4>状态机动画</h4>
+<pre>
+    在多种状态下可以切换运动状态，关于状态机可以百度搜索相关资料，这里提供了一个简陋的实现
+</pre>
+            <div class="row-fluid clearfix">
+                <div class="span12 cube-box">
+                    <div id="state3a" class="cube green" style="display:none"></div>
+                    <div id="state3b" class="cube orange" style="display:none"></div>
+                </div>
+            </div>
+            <div>
+                <button id="state3_btn">开始状态1</button>
+                <button id="state4_btn">开始状态2</button>
+            </div>
+        </div>
+
+        <div class="state4">
+            <h4>路径动画</h4>
+            <div class="row-fluid clearfix">
+                <div class="span12 cube-box">
+                    <img src="http://www.immocha.com/image/heart.png" alt="" id="state4a" style="position:absolute">
+                </div>
+            </div>
+            <div>
+                <button id="state5_btn">开始</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>文件打包下载</h2>
+    <a href="/publish/zip.php?dir=product/jq-plugins/common/animatex" class="button-secondary pure-button">进入下载</a>
+
+    <script type="text/javascript" src="jquery.animateX.js"></script>
+    <script type="text/javascript">
+        $("#state1_btn").click(function(event) {
+            $("#state1a").animate({left:150,top:150,opacity:0},1000,function(){
+                $(this).css({left:0,top:0,opacity:1});
+            });
+            $("#state1b").css3("state1b");
+        });
+        $("#state2_btn").click(function(event) {
+            $("#state2a").animate({left:150,top:150},1000,function(){
+                // 恢复
+                $(this).css({left:0,top:0,opacity:1});
+            }).css3("bounce").css3("moving");
+        });
+
+        var fms = $.StateMachine.create();
+        fms.add("state1",function(){
+            $("#state3a").show().stop(0).animate({left:100,top:100},1000).html("该我出现了!");
+        },function(){
+            $("#state3a").stop(0).animate({left:0,top:0},1000).html("该我走了！");
+        });
+        fms.add("state2",function(){
+            $("#state3b").show().stop(0).animate({left:100,top:100},1000).html("该我出现了!");
+        },function(){
+            $("#state3b").stop(0).animate({left:0,top:0},1000).html("该我走了！");
+        });
+
+        $("#state3_btn").click(function(event) {
+            fms.transition("state1");
+        });
+        $("#state4_btn").click(function(event) {
+            fms.transition("state2");
+        });
+        $("#state5_btn").click(function(event) {
+            $("#state4a").css3('path')
+        });
+    </script>
+</body>
+</html>

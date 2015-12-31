@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>省市地插件</title>
+        <link rel="stylesheet" href="../pure-min.css">
+        <link rel="stylesheet" href="../demo.css">
+        <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+        <!-- 插件文件 -->
+        <link rel="stylesheet" href="jquery.linkage_select.css">
+        <script type="text/javascript" src="jquery.linkage_select.js"></script>
+        <style type="text/css">
+            
+        </style>
+    </head>
+    <body>
+        <h2>效果预览</h2>
+
+        <div class="linkage_select"></div>
+
+        <script type="text/javascript">
+            $(".linkage_select").LinkageSelect({
+                dataUrl:"http://manweb.nong12.com/city/getCountryJsonpList.do",
+                map: {
+                    id:"regionId",
+                    name:"regionName",
+                    pid:"parentId",
+                },
+                pid:"-10",
+                selected:["111","1110101"],
+                inputName:"region"
+            });
+        </script>
+        <h2>文件打包下载</h2>
+        <a href="/publish/zip.php?dir=product/jq-plugins/common/linkage_select" class="button-secondary pure-button">进入下载</a>
+    </body>
+</html>

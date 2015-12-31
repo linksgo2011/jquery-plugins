@@ -1,0 +1,88 @@
+.jquery_photos{
+    width: 580px;
+}
+.jquery_photos .imgbox{
+    position: relative;
+}
+.jquery_photos .imgbox img{
+    display: block;
+}
+.jquery_photos .imagebox-content{
+    width: 100%;
+    height: 387px;
+    background-repeat: no-repeat;
+}
+.jquery_photos .btn-prev{
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    top:50%;
+    margin-top: -30px;
+    left: 0;
+    cursor:pointer;
+    background:url(./images/prev_off.png) center center no-repeat;
+}
+.jquery_photos .btn-next{
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    top:50%;
+    margin-top: -30px;
+    right: 0;
+    cursor:pointer;
+    background:url(./images/next_off.png) center center no-repeat;
+}
+.jquery_photos .page{
+    position: absolute;
+    left: 10px;
+    bottom:10px;
+    color: #f60;
+}
+.jquery_photos .page .separate{
+    color:#fff;
+}
+
+.jquery_photos .thumbs{
+    position:relative;
+    width: 100%;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.jquery_photos .thumb-list{
+    position: relative;
+    margin:0px;
+    padding:0px;
+    white-space: nowrap;
+    font-size: 0;
+}
+.jquery_photos .thumb-list li{
+    display: inline;
+    margin-right: 8px;
+}
+
+.jquery_photos .btn-scrollprev{
+    width: 17px;
+    height: 74px;
+    position: absolute;
+    top:0;
+    left: 0;
+    cursor:pointer;
+    background:url(./images/prev_page.png) center center no-repeat;
+}
+.jquery_photos .btn-scrollnext{
+    width: 17px;
+    height: 74px;
+    position: absolute;
+    top:0;
+    right: 0;
+    cursor:pointer;
+    background:url(./images/next_page.png) center center no-repeat;
+}
+.jquery_photos .thumLine{
+    position:absolute;
+    width: 100px;
+    height:63px;
+    border:5px solid #ccc;
+    top:0;
+}
+
