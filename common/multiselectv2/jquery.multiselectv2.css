@@ -1,0 +1,9 @@
+.mutil-select .selects-group{display:inline-block}
+.mutil-select .btn-add{display:inline-block;width:43px;height:30px;line-height:30px;background:#23ac38;color:#fff;text-align:center;border:1px #23ac38 solid;cursor:pointer;font-size:13px;border-radius:4px;text-decoration:none;}
+.mutil-select .btn-add:hover{filter:alpha(opacity=80);opacity:.8}
+.mutil-select select{padding:8px 0;line-height:30px;min-width:140px;margin-right:20px}
+.mutil-select .invalid{border:1px solid #f60}
+.mutil-select .rs-box{display:inline-block;background:#eee;margin-top:10px}
+.mutil-select .rs-box .item{display:inline-block;color:#666;min-width:100px;padding:5px;padding-right:20px;margin:10px;background:#fff;text-indent:8px;border:1px solid #ddd;position:relative}
+.mutil-select .rs-box .icon-close{display:inline-block;width:14px;height:14px;vertical-align:middle;position:absolute;right:8px;top:50%;margin-top:-7px;background:url(close.png) center center no-repeat;cursor:pointer}
+.mutil-select .rs-box .icon-close:hover{background:url(closeh.png) center center no-repeat}

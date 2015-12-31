@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>相册插件</title>
+        <link rel="stylesheet" href="../pure-min.css">
+        <link rel="stylesheet" href="../demo.css">
+        <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+
+        <!-- 插件文件 -->
+        <link rel="stylesheet" href="jquery.photos.css">
+        <script type="text/javascript" src="jquery.photos.js"></script>
+    </head>
+    <body>
+        <h2>效果预览</h2>
+        <div class="jquery_photos">
+            <div class="imgbox">
+                <div class="imagebox-content">
+                    <img src="http://www.17sucai.com/preview/27774/2014-03-29/%E4%B8%80%E6%AC%BE%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E5%92%8C%E5%B7%A6%E5%8F%B3%E6%8C%89%E9%92%AE%E7%9A%84jquery%E7%9B%B8%E5%86%8C%E6%8F%92%E4%BB%B6/img/img1.jpg" alt="">
+                </div>
+                <div class="page"><span class="current">1</span><span class="separate">-</span><span class="total">6</span></div>
+                <div class="btn-prev"></div>
+                <div class="btn-next"></div>
+            </div>
+            <div class="thumbs">
+                <ul class="thumb-list">
+                    <li><a href="http://www.17sucai.com/preview/27774/2014-03-29/%E4%B8%80%E6%AC%BE%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E5%92%8C%E5%B7%A6%E5%8F%B3%E6%8C%89%E9%92%AE%E7%9A%84jquery%E7%9B%B8%E5%86%8C%E6%8F%92%E4%BB%B6/img/img1.jpg"><img src="./images/thum1.jpg" alt=""></a></li>
+                    <li><a href="http://www.17sucai.com/preview/27774/2014-03-29/%E4%B8%80%E6%AC%BE%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E5%92%8C%E5%B7%A6%E5%8F%B3%E6%8C%89%E9%92%AE%E7%9A%84jquery%E7%9B%B8%E5%86%8C%E6%8F%92%E4%BB%B6/img/img2.jpg"><img src="./images/thum2.jpg" alt=""></a></li>
+                    <li><a href="http://www.17sucai.com/preview/27774/2014-03-29/%E4%B8%80%E6%AC%BE%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E5%92%8C%E5%B7%A6%E5%8F%B3%E6%8C%89%E9%92%AE%E7%9A%84jquery%E7%9B%B8%E5%86%8C%E6%8F%92%E4%BB%B6/img/img3.jpg"><img src="./images/thum3.jpg" alt=""></a></li>
+                    <li><a href="http://www.17sucai.com/preview/27774/2014-03-29/%E4%B8%80%E6%AC%BE%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E5%92%8C%E5%B7%A6%E5%8F%B3%E6%8C%89%E9%92%AE%E7%9A%84jquery%E7%9B%B8%E5%86%8C%E6%8F%92%E4%BB%B6/img/img4.jpg"><img src="./images/thum4.jpg" alt=""></a></li>
+                    <li><a href="http://www.17sucai.com/preview/27774/2014-03-29/%E4%B8%80%E6%AC%BE%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E5%92%8C%E5%B7%A6%E5%8F%B3%E6%8C%89%E9%92%AE%E7%9A%84jquery%E7%9B%B8%E5%86%8C%E6%8F%92%E4%BB%B6/img/img5.jpg"><img src="./images/thum5.jpg" alt=""></a></li>
+                    <li><a href="http://www.17sucai.com/preview/27774/2014-03-29/%E4%B8%80%E6%AC%BE%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E5%92%8C%E5%B7%A6%E5%8F%B3%E6%8C%89%E9%92%AE%E7%9A%84jquery%E7%9B%B8%E5%86%8C%E6%8F%92%E4%BB%B6/img/img6.jpg"><img src="./images/thum6.jpg" alt=""></a></li>
+                    <div class="thumLine" style="left:0px;"></div>
+                </ul>
+                <div class="btn-scrollprev"></div>
+                <div class="btn-scrollnext"></div>
+            </div>
+        </div>
+        
+
+        <script type="text/javascript">
+            $(".jquery_photos").photos({
+                fadeSpeed: 500
+            });
+        </script>
+
+        <h2>文件打包下载</h2>
+        <a href="/publish/zip.php?dir=product/jq-plugins/common/photos" class="button-secondary pure-button">进入下载</a>
+    </body>
+</html>

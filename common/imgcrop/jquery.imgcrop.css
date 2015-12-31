@@ -1,0 +1,152 @@
+.imgcrop{
+    width:400px;    
+    overflow:hidden;
+    position: relative;
+    border: 1px solid #ededed;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.imgcrop .bg{
+    opacity:.5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    background: #000;
+}
+.imgcrop .rect{
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor: move;
+}
+.imgcrop .rect .wrap{
+    position: relative;
+    width:100%;
+    height:100%
+}
+.imgcrop .rect .rs-box{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.imgcrop .rect .rs{
+    max-width: none;
+}
+.imgcrop .rect .borders{
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border:1px solid #fff;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+}
+.imgcrop .rect .cube{
+    position: absolute;
+    width:4px;
+    height:4px;
+    background:#fff;
+    z-index: 100;
+    opacity: 0.8;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+}
+.imgcrop .rect .line{
+    position: absolute;
+}
+.imgcrop .rect .top{
+    height:4px;
+    width:100%;
+    top:-2px;
+    cursor: n-resize;
+}
+.imgcrop .rect .right{
+    width:4px;
+    height:100%;
+    right:-2px;
+    cursor: w-resize;
+}
+.imgcrop .rect .bottom{
+    height:4px;
+    width:100%;
+    bottom:-2px;
+    cursor: n-resize;
+}
+.imgcrop .rect .left{
+    width:4px;
+    height:100%;
+    left:-2px;
+    cursor: w-resize;
+}
+.imgcrop .rect .topleft{
+    left:-2px;
+    top:-2px;
+    cursor: nw-resize;
+}
+.imgcrop .rect .topcenter{
+    left:50%;
+    margin-left:-2px;
+    top:-2px;
+    cursor: n-resize;
+}
+.imgcrop .rect .topright{
+    top:-2px;
+    right: -2px;
+    cursor: sw-resize;
+}
+.imgcrop .rect .centerleft{
+    left:-2px;
+    top:50%;
+    margin-top: -2px;
+    cursor: w-resize;
+}
+.imgcrop .rect .centerright{
+    right:-2px;
+    top:50%;
+    margin-top: -2px;
+    cursor: w-resize;
+}
+.imgcrop .rect .bottomleft{
+    left:-2px;
+    bottom:-2px;
+    cursor: sw-resize;
+}
+.imgcrop .rect .bottomcenter{
+    left:50%;
+    margin-left:-2px;
+    bottom:-2px;
+    cursor: n-resize;
+}
+.imgcrop .rect .bottomright{
+    right: -2px;
+    bottom: -2px;
+    cursor: nw-resize;
+}
+.imgcrop .rect .center{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background:#fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: move;
+    z-index:0;
+}
+
+
+.imgcrop .rect .rs{ 
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+.imgcrop img{
+    max-width: 100%;
+}

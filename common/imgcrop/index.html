@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>图片裁减插件</title>
+        <link rel="stylesheet" href="../pure-min.css">
+        <link rel="stylesheet" href="../demo.css">
+        <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+        <!-- 插件文件 -->
+        <link rel="stylesheet" href="jquery.imgcrop.css">
+        <script type="text/javascript" src="jquery.imgcrop.js"></script>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <h2>效果预览</h2>
+            
+        <!-- html 模板 -->
+        <div class="imgcrop">
+            <div class="bg"><img class="ori_img" src="" alt=""></div>
+            <!-- 拽拽层 -->
+            <div class="rect" >
+                <div class="wrap">
+                    <div class="rs-box">
+                        <img src="" class="rs" alt="">
+                    </div>
+                    <div class="borders">
+                        <div class="center" data-action="move"></div>
+                        <div class="cube topleft" data-action="topleft"></div>
+                        <div class="cube topcenter" data-action="top"></div>
+                        <div class="cube topright" data-action="topright"></div>
+                        <div class="cube centerleft" data-action="left"></div>
+                        <div class="cube centerright" data-action="right"></div>
+                        <div class="cube bottomleft" data-action="bottomleft"></div>
+                        <div class="cube bottomcenter" data-action="bottom"></div>
+                        <div class="cube bottomright" data-action="bottomright"></div>
+                        <div class="line top" data-action="top"></div>
+                        <div class="line right" data-action="right"></div>
+                        <div class="line bottom" data-action="bottom"></div>
+                        <div class="line left" data-action="left"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(".imgcrop").imgcrop({
+                oriImg:"demo.jpg",
+                mode:"ratio",
+                onMove:function(rs){
+                },
+                onMouseUp:function(rs){
+                    console.log(rs);
+                }
+            });
+        </script>
+        <h2>文件打包下载</h2>
+        <a href="/publish/zip.php?dir=product/jq-plugins/common/imgcrop" class="button-secondary pure-button">进入下载</a>
+    </body>
+</html>

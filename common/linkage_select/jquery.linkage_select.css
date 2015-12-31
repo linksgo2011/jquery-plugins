@@ -1,0 +1,3 @@
+.linkage_select{height:38px;}
+.linkage_select select{padding:8px 0;line-height:30px;min-width:140px;margin-right:20px;}
+.linkage_select .invalid{border:1px solid #f60;}

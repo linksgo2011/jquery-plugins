@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>两列多选插件</title>
+        <link rel="stylesheet" href="../pure-min.css">
+        <link rel="stylesheet" href="../demo.css">
+        <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+        <!-- 插件文件 -->
+        <link rel="stylesheet" href="jquery.multiselectv2.css">
+        <script type="text/javascript" src="jquery.multiselectv2.js?v=0.1"></script>
+        <style type="text/css">
+            
+        </style>
+    </head>
+    <body>
+        <h2>效果预览(v2版本支持多级、多选下拉)</h2>
+        
+        <h3>1级下拉列表</h3>
+        <div class="mutil-select" id="simple_mutil_select"></div>
+        
+        <h3>多级下拉列表</h3>
+        <div class="mutil-select" id="mutil_mutil_select"></div>
+        
+        <script type="text/javascript">
+            $("#simple_mutil_select").multiselect({
+                dataSource:"default",
+                source:[{"id":"","name":"请选择"},{"id":"1","name":"测试"},{"id":"2","name":"李子"}]
+            });
+
+            $("#mutil_mutil_select").multiselect({
+                dataUrl:"http://manweb.nong12.com/city/getCountryJsonpList.do",
+                level:3,
+                dataSource:"common",
+                map:{
+                    id:"regionId",
+                    name:"regionName",
+                    pid:"parentId"
+                }
+            });
+        </script>
+        
+        <h2>文件打包下载</h2>
+        <a href="/publish/zip.php?dir=product/jq-plugins/common/multiselectv2" class="button-secondary pure-button">进入下载</a>
+    </body>
+</html>
